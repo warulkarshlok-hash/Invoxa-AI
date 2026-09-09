@@ -13,6 +13,7 @@ import AllInvoices from "./Pages/Invoices/AllInvoices";
 import CreateInvoice from "./Pages/Invoices/CreateInvoice";
 import ProfilePage from "./Pages/Profile/ProfilePage";
 import ProtectedRoute from "./Pages/Auth/ProtectedRoute";
+import { AuthProvider } from "./Context/AuthContext";
 
 
 
@@ -20,7 +21,7 @@ import ProtectedRoute from "./Pages/Auth/ProtectedRoute";
 const App = () => {
   
   return (
-    <div>
+    <AuthProvider>
       <Router>
         <Routes>
           {/* Public Routes */}
@@ -49,7 +50,7 @@ const App = () => {
             fontSize:"13px",
           },
         }} />
-    </div>
+    </AuthProvider>
   )
 }
 
