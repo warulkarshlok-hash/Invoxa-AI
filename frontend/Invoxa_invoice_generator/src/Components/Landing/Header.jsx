@@ -6,19 +6,15 @@ import { FileText, Menu, X } from "lucide-react";
 
 import ProfileDropdown from "../Layout/ProfileDropdown";
 import Button from "../Ui/Button";
+import { useAuth } from "../../Context/AuthContext";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const isAuthenticated = false;
+  const {isAuthenticated,user,logout} =  useAuth();
 
-  const user = {
-    name: "Shlok",
-    email: "shlokatwork@gmail.com",
-  };
 
-  const logout = () => {};
 
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
 

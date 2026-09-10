@@ -3,9 +3,9 @@ const User = require("../models/User");
 
 // Helper: Generate JWT
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: "7d",
-  });
+    return jwt.sign({ id }, process.env.JWT_SECRET, {
+        expiresIn: "7d",
+    });
 };
 
 // @desc    Register new user
@@ -39,9 +39,14 @@ exports.registerUser = async (req, res) => {
 
         if (user) {
             res.status(201).json({
-                _id: user._id,
-                name: user.name,
-                email: user.email,
+                user: {
+                    _id: user._id,
+                    name: user.name,
+                    email: user.email,
+                    businessName: user.businessName || "",
+                    address: user.address || "",
+                    phone: user.phone || ""
+                },
                 token: generateToken(user._id)
             });
         } else {
@@ -49,10 +54,8 @@ exports.registerUser = async (req, res) => {
                 message: "Invalid user data"
             });
         }
-
     } catch (error) {
         console.error("REGISTER ERROR:", error);
-
         res.status(500).json({
             message: error.message
         });
@@ -63,28 +66,33 @@ exports.registerUser = async (req, res) => {
 // @route   POST /api/auth/login
 // @access  Public
 exports.loginUser = async (req, res) => {
-  const { email, password } = req.body;
+    const { email, password } = req.body;
 
-  try {
-    const user = await User.findOne({ email }).select("+password");
+    try {
+        const user = await User.findOne({ email }).select("+password");
 
-    if (user && (await user.matchPassword(password))) {
-        res.json({
-            _id: user._id,
-            name: user.name,
-            email: user.email,
-            token: generateToken(user._id),
-
-            businessName: user.businessName || "",
-            address: user.address || "",
-            phone: user.phone || "",
+        if (user && (await user.matchPassword(password))) {
+            res.json({
+                user: {
+                    _id: user._id,
+                    name: user.name,
+                    email: user.email,
+                    businessName: user.businessName || "",
+                    address: user.address || "",
+                    phone: user.phone || ""
+                },
+                token: generateToken(user._id)
+            });
+        } else {
+            res.status(401).json({
+                message: "Invalid credentials"
+            });
+        }
+    } catch (error) {
+        res.status(500).json({
+            message: "Server error"
         });
-    } else {
-        res.status(401).json({ message: "Invalid credentials" });
     }
-  } catch (error) {
-    res.status(500).json({ message: "Server error" });
-  }
 };
 
 // @desc    Get current logged-in user
@@ -109,6 +117,7 @@ exports.getMe = async (req, res) => {
         });
     }
 };
+
 // @desc    Update user profile
 // @route   PUT /api/auth/me
 // @access  Private
@@ -133,9 +142,13 @@ exports.updateUserProfile = async (req, res) => {
                 phone: updatedUser.phone
             });
         } else {
-            res.status(404).json({ message: "User not found" });
+            res.status(404).json({
+                message: "User not found"
+            });
         }
     } catch (error) {
-        res.status(500).json({ message: "Server error" });
+        res.status(500).json({
+            message: "Server error"
+        });
     }
 };

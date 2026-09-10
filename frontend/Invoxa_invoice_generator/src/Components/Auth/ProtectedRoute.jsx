@@ -1,5 +1,6 @@
 import { Navigate, Outlet } from 'react-router-dom';
-import DashboardLayout from '../../Components/Layout/DashboardLayout';
+import DashboardLayout from '../Layout/DashboardLayout';
+import { useAuth } from '../../Context/AuthContext';
 
 const ProtectedRoute = ({ children }) => {
   // will integrate these values later

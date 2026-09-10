@@ -1,4 +1,6 @@
 import { BarChart2, Mail, Sparkles, FileText } from "lucide-react";
+import { LayoutDashboard } from "lucide-react";
+import { Plus,Users } from "lucide-react";
 
 
 export const FEATURES = [
@@ -83,4 +85,12 @@ export const FAQS = [
     answer:
       "Plans are per workspace, not per account. You can upgrade one workspace, and many more...",
   },
+];
+
+// Navigation items configuration
+export const NAVIGATION_MENU = [
+  { id: "dashboard", name: "Dashboard", icon: LayoutDashboard },
+  { id: "invoices", name: "Invoices", icon: FileText },
+  { id: "invoices/new", name: "Create Invoice", icon: Plus },
+  { id: "profile", name: "Profile", icon: Users },
 ];
