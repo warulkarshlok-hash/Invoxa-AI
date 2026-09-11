@@ -8,7 +8,7 @@ import moment from "moment";
 import { useAuth } from "../../Context/AuthContext";
 
 import InputField from "../../Components/Ui/InputField";
-import TextareaField from "../../Components/Ui/TextareaField";
+import TextareaField from "../../Components/ui/TextareaField";
 import SelectField from "../../Components/Ui/SelectField";
 import Button from "../../components/ui/Button";
 
