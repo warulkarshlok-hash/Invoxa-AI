@@ -18,10 +18,6 @@ import DashboardLayout from "./Components/Layout/DashboardLayout";
 import InvoiceDetail from "./Pages/Invoices/InvoiceDetail";
 
 
-
-
-
-
 const App = () => {
 
   return (
