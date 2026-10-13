@@ -13,7 +13,7 @@ import {
 
 import axiosInstance from '../../Utils/AxiosInstance';
 
-import { API_PATHS } from '../../utils/ApiPaths';
+import { API_PATHS } from '../../Utils/ApiPaths';
 
 import toast from 'react-hot-toast';
 

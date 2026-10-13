@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axiosInstance from '../../Utils/AxiosInstance';
-import { API_PATHS } from '../../utils/ApiPaths'
+import { API_PATHS } from '../../Utils/ApiPaths'
 import { Loader2, Edit, Printer, AlertCircle, Mail } from 'lucide-react';
 import toast from 'react-hot-toast';
 import CreateInvoice from './CreateInvoice';
