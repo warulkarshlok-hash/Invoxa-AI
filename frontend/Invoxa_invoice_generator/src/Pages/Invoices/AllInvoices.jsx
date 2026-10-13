@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import axiosInstance from '../../utils/AxiosInstance';
-import { API_PATHS } from '../../utils/ApiPaths';
+import axiosInstance from '../../Utils/AxiosInstance';
+import { API_PATHS } from '../../Utils/ApiPaths';
 import { Loader2, Trash2, Edit, Search, FileText, Plus, AlertCircle, Sparkles, Mail } from 'lucide-react';
 import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
-import Button from '../../components/ui/Button';
+import Button from '../../Components/ui/Button';
 import CreateWithAIModal from '../../Components/invoices/CreateWithAIModal';
 import ReminderModal from '../../Components/invoices/ReminderModal';
 

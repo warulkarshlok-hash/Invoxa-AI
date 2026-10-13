@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axiosInstance from '../../utils/AxiosInstance';
-import { API_PATHS } from '../../utils/ApiPaths';
+import axiosInstance from '../../Utils/AxiosInstance';
+import { API_PATHS } from '../../utils/ApiPaths'
 import { Loader2, Edit, Printer, AlertCircle, Mail } from 'lucide-react';
 import toast from 'react-hot-toast';
 import CreateInvoice from './CreateInvoice';
-import Button from '../../components/ui/Button';
+import Button from '../../Components/ui/Button';
 import ReminderModal from '../../Components/invoices/ReminderModal';
 
 const InvoiceDetail = () => {

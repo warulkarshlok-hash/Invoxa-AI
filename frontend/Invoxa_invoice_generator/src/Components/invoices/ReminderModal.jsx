@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, Mail, Copy, Check } from 'lucide-react';
-import Button from '../../components/ui/Button';
+import Button from '../ui/Button';
 import TextareaField from '../ui/TextareaField';
-import axiosInstance from '../../utils/AxiosInstance';
-import { API_PATHS } from '../../utils/ApiPaths';
+import axiosInstance from '../../Utils/AxiosInstance';
+import { API_PATHS } from '../../Utils/ApiPaths';
 import toast from 'react-hot-toast';
 
 const ReminderModal = ({ isOpen, onClose, invoiceId }) => {

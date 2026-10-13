@@ -11,13 +11,13 @@ import {
   MapPin
 } from 'lucide-react';
 
-import axiosInstance from '../../utils/AxiosInstance';
+import axiosInstance from '../../Utils/AxiosInstance';
 
 import { API_PATHS } from '../../utils/ApiPaths';
 
 import toast from 'react-hot-toast';
 
-import InputField from '../../Components/Ui/InputField';
+import InputField from '../../Components/ui/InputField';
 
 import TextareaField from '../../Components/ui/TextareaField';
 

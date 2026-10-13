@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import axiosInstance from "../../utils/AxiosInstance";
-import { API_PATHS } from "../../utils/ApiPaths";
+import axiosInstance from "../../Utils/AxiosInstance";
+import { API_PATHS } from "../../Utils/ApiPaths";
 import { Loader2, FileText, DollarSign, Plus } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import moment from "moment";
-import Button from "../../components/ui/Button";
+import Button from "../../Components/ui/Button";
 import AIInsightsCard from "../../Components/Ui/AIInsightsCard";
 
 const Dashboard = () => {
