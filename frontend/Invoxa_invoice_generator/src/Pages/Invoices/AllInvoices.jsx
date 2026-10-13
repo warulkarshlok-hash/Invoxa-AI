@@ -4,7 +4,7 @@ import { API_PATHS } from '../../Utils/ApiPaths';
 import { Loader2, Trash2, Edit, Search, FileText, Plus, AlertCircle, Sparkles, Mail } from 'lucide-react';
 import moment from 'moment';
 import { useNavigate } from 'react-router-dom';
-import Button from '../../Components/ui/Button';
+import Button from '../../Components/Ui/Button';
 import CreateWithAIModal from '../../Components/invoices/CreateWithAIModal';
 import ReminderModal from '../../Components/invoices/ReminderModal';
 

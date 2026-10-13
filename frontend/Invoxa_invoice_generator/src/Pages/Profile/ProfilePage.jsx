@@ -17,9 +17,9 @@ import { API_PATHS } from '../../Utils/ApiPaths';
 
 import toast from 'react-hot-toast';
 
-import InputField from '../../Components/ui/InputField';
+import InputField from '../../Components/Ui/InputField';
 
-import TextareaField from '../../Components/ui/TextareaField';
+import TextareaField from '../../Components/Ui/TextareaField';
 
 
 const ProfilePage = () => {

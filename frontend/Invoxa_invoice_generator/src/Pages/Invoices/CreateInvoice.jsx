@@ -7,10 +7,10 @@ import toast from "react-hot-toast";
 import moment from "moment";
 import { useAuth } from "../../Context/AuthContext";
 
-import InputField from "../../Components/ui/InputField";
-import TextareaField from "../../Components/ui/TextareaField";
-import SelectField from "../../Components/ui/SelectField";
-import Button from "../../Components/ui/Button";
+import InputField from "../../Components/Ui/InputField";
+import TextareaField from "../../Components/Ui/TextareaField";
+import SelectField from "../../Components/Ui/SelectField";
+import Button from "../../Components/Ui/Button";
 
 const CreateInvoice = ({ existingInvoice, onSave }) => {
   const navigate = useNavigate();

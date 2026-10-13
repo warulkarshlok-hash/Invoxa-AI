@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, Mail, Copy, Check } from 'lucide-react';
-import Button from '../ui/Button';
-import TextareaField from '../ui/TextareaField';
+import Button from '../Ui/Button';
+import TextareaField from '../Ui/TextareaField';
 import axiosInstance from '../../Utils/AxiosInstance';
 import { API_PATHS } from '../../Utils/ApiPaths';
 import toast from 'react-hot-toast';

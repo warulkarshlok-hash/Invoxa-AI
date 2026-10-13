@@ -5,7 +5,7 @@ import { API_PATHS } from '../../Utils/ApiPaths'
 import { Loader2, Edit, Printer, AlertCircle, Mail } from 'lucide-react';
 import toast from 'react-hot-toast';
 import CreateInvoice from './CreateInvoice';
-import Button from '../../Components/ui/Button';
+import Button from '../../Components/Ui/Button';
 import ReminderModal from '../../Components/invoices/ReminderModal';
 
 const InvoiceDetail = () => {

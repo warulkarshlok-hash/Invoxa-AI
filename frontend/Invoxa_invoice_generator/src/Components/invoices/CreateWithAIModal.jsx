@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Sparkles } from 'lucide-react';
-import Button from '../ui/Button';
-import TextareaField from '../ui/TextareaField';
+import Button from '../Ui/Button';
+import TextareaField from '../Ui/TextareaField';
 import axiosInstance from '../../Utils/AxiosInstance';
 import { API_PATHS } from '../../Utils/ApiPaths';
 import toast from 'react-hot-toast';
